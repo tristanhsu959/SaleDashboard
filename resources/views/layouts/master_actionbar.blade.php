@@ -1,12 +1,11 @@
-@inject('service', 'App\Services\HomeService')
-@inject('viewHelper', 'App\ViewHelpers\MenuHelper')
+@inject('viewHelper', 'App\ViewHelpers\AppHelper')
 
-<nav class="navbar actionbar">
-	<div class="container-fluid">
-		<span class="navbar-brand"><span class="material-symbols-outlined filled-icon">bubble_chart</span></span>
-		<span class="navbar-info">
-			<div>發售日</div>
-			<div></div>
-		</span>
-	</div>
+<nav class="page navbar {{ $viewHelper->getNavbarStyle() }}">
+	<span class="navbar-head">
+		<span class="material-symbols-outlined filled-icon">bubble_chart</span>
+		@yield('navHead')
+	</span>
+	<span class="navbar-action">
+	@yield('navAction')
+	</span>
 </nav>

@@ -32,16 +32,15 @@
 			</div>
 		@endif
 		
-		
-		@hasSection('content')
-			@include('layouts.master_menu')
+		@include('layouts.master_menu')
 			
-			<div class='content-wrapper'>
-			{{--@include('layouts.master_actionbar')--}}
-				
+		<div class='content-wrapper'>
+			@include('layouts.master_actionbar')
+			@hasSection('content')
 				@yield('content')
-			</div>
-		@endif
+			@endif
+		</div>
+		
 		
 		
 		@if(! empty($msg))

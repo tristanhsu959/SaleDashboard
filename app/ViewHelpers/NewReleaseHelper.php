@@ -36,9 +36,4 @@ class NewReleaseHelper
 		
 		return $dateList;
 	}
-	
-	public function getHeadStyle($segment)
-	{
-		return Str::replace('_', '-', $segment);
-	}
 }

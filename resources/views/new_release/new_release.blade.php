@@ -9,16 +9,15 @@
     <script src="{{ asset('scripts/new_release/new_release.js') }}"></script>
 @endpush
 
+@section('navHead', $data['productName'])
+
+@section('navAction')
+<div>發售日</div>
+<div>{{ $data['saleDate'] }}</div>
+@endsection
+
+
 @section('content')
-
-<nav class="page navbar {{ $viewHelper->getHeadStyle($segment) }}">
-	<span class="navbar-brand"><span class="material-symbols-outlined filled-icon">bubble_chart</span>{{ $data['productName'] }}</span>
-	<span class="navbar-info">
-		<div>發售日</div>
-		<div>{{ $data['saleDate'] }}</div>
-	</span>
-</nav>
-
 @if($status === TRUE)
 <div class='caption'>區域彙總</div>
 <section class="statistics-area section-wrapper container-fluid">
@@ -125,4 +124,4 @@
 	</div>
 </section>
 @endif
-@endsection()
+@endsection

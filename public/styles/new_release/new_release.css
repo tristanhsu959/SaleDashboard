@@ -1,36 +1,21 @@
 /* New Release Style */
 .page.navbar {
-	width: 100%;
-	height: 64px;
-	/* height: auto; */
-	/* Default */
-	background-color: var(--bg-secondary-color);
-	color: #000;
-	padding-left: 1rem;
-	padding-right: 1rem;
-		
 	&.pork-ribs {
 		background-color: var(--bg-secondary-color);
 		
-		.navbar-brand, .navbar-info {
+		.navbar-head, .navbar-action {
 			color: #000;
 		}
 	}
 	&.tomato-beef {
 		background-color: #ff5722;
 		
-		.navbar-brand, .navbar-info {
+		.navbar-head, .navbar-action {
 			color: #fff;
 		}
 	}
 	
-	.navbar-brand {
-		display: flex;
-		align-items: center;
-		font-weight: 500;
-	}
-	
-	.navbar-info {
+	.navbar-action {
 		div:first-child {
 			font-weight: 500;
 		}
