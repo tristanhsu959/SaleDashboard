@@ -88,17 +88,17 @@ body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		/* padding-top: 2rem; */
-		/* padding-bottom: 2rem; */
-		/* background-color: var(--bg-primary-color); */
-		background-color: var(--bg-brand-secondary-light-color);
+		// background-color: var(--bg-brand-primary-color);
+		// background-color: var(--bg-brand-secondary-light-color);
+		// background: linear-gradient(135deg, #f5ac2d, #cb1a19, #cb1a19);
+		background: linear-gradient(125deg, #cb1a19, #cb1a19, #f5ac2d, #f5ac2d);
 		
 		&:after {
 			position: absolute;
 			left: 4px;
 			bottom: 0;
 			content: "\00A9 2025";
-			color: #e65100;
+			color: var(--bg-primary-color);
 			font-size: .75rem;
 		}
 		
@@ -106,8 +106,6 @@ body {
 			width: auto;
 			height: 48px;
 			/* mix-blend-mode: soft-light;/* soft-light  luminosity ; */
-			
-			
 		}
 	}
 	

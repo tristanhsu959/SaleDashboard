@@ -28,6 +28,7 @@
 			<div class="col">AD帳號</div>
 			<div class="col">顯示名稱</div>
 			<div class="col">管理區域</div>
+			<div class="col col-3">E-Mail</div>
 			<div class="col">權限身份</div>
 			<div class="col col-action">操作</div>
 		</div>
@@ -36,6 +37,7 @@
 			<div class="col">T2025001</div>
 			<div class="col">Tomas</div>
 			<div class="col">全區</div>
+			<div class="col col-3">tristan.hsu@8way.com.tw</div>
 			<div class="col">管理者</div>
 			<div class="col col-action">
 				<a href="" class="btn btn-edit">
@@ -51,6 +53,7 @@
 			<div class="col">T2025001</div>
 			<div class="col">Tomas</div>
 			<div class="col">北區</div>
+			<div class="col col-3">tristan.hsu@8way.com.tw</div>
 			<div class="col">使用者</div>
 			<div class="col col-action">
 				<a href="" class="btn btn-edit">
@@ -66,6 +69,7 @@
 			<div class="col">T2025001</div>
 			<div class="col">Tomas</div>
 			<div class="col">北區</div>
+			<div class="col col-3">tristan.hsu@8way.com.tw</div>
 			<div class="col">使用者</div>
 			<div class="col col-action">
 				<a href="" class="btn btn-edit">
