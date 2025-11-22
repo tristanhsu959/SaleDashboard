@@ -17,7 +17,7 @@ class AuthController extends Controller
 		$this->_service = $authService;
 	}
 	
-	public function index()
+	public function signin()
 	{
 		$msg = session('msg');
 		
@@ -27,14 +27,14 @@ class AuthController extends Controller
         else
 			$response = ResponseLib::initialize()->fail($msg)->get();
 		
-		return view('login', $response);
+		return view('signin', $response);
 	}
 	
 	/* 登入驗證
 	 * @params: request
 	 * @return: array
 	 */
-	public function authLogin(Request $request)
+	public function authSignin(Request $request)
 	{
 		$validator = Validator::make($request->all(), [
             'ad_account' => 'required|max:20',
@@ -42,7 +42,7 @@ class AuthController extends Controller
         ]);
  
         if ($validator->fails()) 
-			return redirect('login')->with('msg', '登入失敗，帳號或密碼輸入錯誤');
+			return redirect('signin')->with('msg', '登入失敗，帳號或密碼輸入錯誤');
 		
 		
 		$account = $request->input('ad_account');
@@ -51,7 +51,7 @@ class AuthController extends Controller
 		$response = $this->_service->authUser($account, $password);
 		
 		if ($response['status'] === FALSE)
-			return redirect('login')->with('msg', '登入失敗，帳號或密碼錯誤');
+			return redirect('signin')->with('msg', '登入失敗，帳號或密碼錯誤');
 		else
 			return redirect('home');
 	}

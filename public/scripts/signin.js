@@ -1,9 +1,9 @@
 /* Login JS */
 
 $(function(){
-	$('#btnLogin').click(function() {
+	$('#btnSignin').click(function() {
 		if (validationInput('#ad_account') && validationInput('#ad_password'))
-			$('#loginForm').submit();
+			$('#signinForm').submit();
 		else
 			return false;
 	});

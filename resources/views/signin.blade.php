@@ -1,14 +1,14 @@
 @extends('layouts.master')
 
 @push('styles')
-    <link href="{{ asset('styles/login.css') }}" rel="stylesheet">
+    <link href="{{ asset('styles/signin.css') }}" rel="stylesheet">
 @endpush
 
 @push('scripts')
-    <script src="{{ asset('scripts/login.js') }}" defer></script>
+    <script src="{{ asset('scripts/signin.js') }}" defer></script>
 @endpush
 
-@section('login')
+@section('signin')
 
 <div class="left-content">
 	<img src="{{ asset('images/logo.svg') }}" />
@@ -24,7 +24,7 @@
 		<h6>使用AD帳號登入至系統</h6>
 	</div>
 	
-	<form action="{{ route('auth') }}" method="post" id="loginForm">
+	<form action="{{ route('auth') }}" method="post" id="signinForm">
 		@csrf
 		<div class="input-field field-blue">
 			<input type="text" class="form-control valid" id="ad_account" name="ad_account" maxlength="20" placeholder=" " required>
@@ -35,7 +35,7 @@
 			<input type="password" class="form-control" id="ad_password" name="ad_password" placeholder=" " maxlength="20" required>
 			<label for="ad_password" class="form-label">Password</label>
 		</div>
-		<button id="btnLogin" type="button" class="btn btn-outline-danger">Sign In</button>
+		<button id="btnSignin" type="button" class="btn btn-outline-danger">Sign In</button>
 	</form>
 </div>
 

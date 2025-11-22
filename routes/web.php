@@ -9,9 +9,10 @@ use App\Http\Controllers\UserController;
 
 
 /* Login */
-Route::get('/', [AuthController::class, 'index'])->name('index');
-Route::get('login', [AuthController::class, 'index'])->name('login');
-Route::post('auth', [AuthController::class, 'authLogin'])->name('auth');
+Route::get('/', [AuthController::class, 'signin'])->name('signin');
+Route::get('signin', [AuthController::class, 'signin'])->name('signin');
+Route::post('auth', [AuthController::class, 'authSignin'])->name('auth');
+Route::get('signout', [AuthController::class, 'signout'])->name('signout');
 
 /* Home */
 Route::get('home', [HomeController::class, 'index'])->name('home');

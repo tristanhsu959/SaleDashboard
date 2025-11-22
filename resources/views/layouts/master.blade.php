@@ -15,7 +15,7 @@
 		<link href="{{ asset('styles/_variables.css') }}" rel="stylesheet" />
 		<link href="{{ asset('styles/my_component.css') }}" rel="stylesheet" />
 		<link href="{{ asset('styles/master.css') }}" rel="stylesheet" />
-		<link href="{{ asset('styles/navbar.css') }}" rel="stylesheet" />
+		<link href="{{ asset('styles/actionbar.css') }}" rel="stylesheet" />
 		@stack('styles')
 		
 		<!-- Scripts -->
@@ -27,9 +27,9 @@
 	</head>
 
 	<body>
-		@hasSection('login')
+		@hasSection('signin')
 			<div class='content-wrapper'>
-				@yield('login')
+				@yield('signin')
 			</div>
 		@else
 			@include('layouts.master_menu')
